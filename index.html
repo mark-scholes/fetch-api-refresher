@@ -8,7 +8,24 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Fetch API sandbox</title>
   </head>
-  <body></body>
+  <body>
+    <button id="getText">Get Text</button>
+    <div id="output"></div>
+    <script>
+      const getTextBtn = document
+        .getElementById("getText")
+        .addEventListener("click", getText);
+
+      function getText() {
+        fetch("sample.txt")
+          .then((res) => res.text())
+          .then((data) => {
+            let text = `<p>${data}</p>`;
+            document.getElementById("output").innerHTML = text;
+          });
+      }
+    </script>
+  </body>
 </html>
