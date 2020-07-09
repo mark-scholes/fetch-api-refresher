@@ -12,20 +12,9 @@
   </head>
   <body>
     <button id="getText">Get Text</button>
+    <button id="getUsers">Get Users</button>
+    <button id="getPosts">Get API Data</button>
     <div id="output"></div>
-    <script>
-      const getTextBtn = document
-        .getElementById("getText")
-        .addEventListener("click", getText);
-
-      function getText() {
-        fetch("sample.txt")
-          .then((res) => res.text())
-          .then((data) => {
-            let text = `<p>${data}</p>`;
-            document.getElementById("output").innerHTML = text;
-          });
-      }
-    </script>
+    <script src="app.js" type="text/javascript"></script>
   </body>
 </html>
