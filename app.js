@@ -7,6 +7,10 @@ const getPostsBtn = document
   .getElementById("getPosts")
   .addEventListener("click", getPosts);
 
+const addPosts = document
+  .getElementById("addPost")
+  .addEventListener("click", addPost);
+
 function getText() {
   console.log("beep");
   fetch("sample.txt")
@@ -51,5 +55,23 @@ function getPosts() {
           `;
       });
       document.getElementById("output").innerHTML = output;
+    });
+}
+
+function addPost(e) {
+  e.preventDefault();
+  let title = document.getElementById("title").value;
+  let body = document.getElementById("body").value;
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({ title, body }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
     });
 }
