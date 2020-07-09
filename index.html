@@ -7,22 +7,34 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Fetch API sandbox</title>
   </head>
   <body>
-    <button id="getText">Get Text</button>
-    <button id="getUsers">Get Users</button>
-    <button id="getPosts">Get API Data</button>
-    <hr />
-    <div id="output"></div>
-    <form id="addPost">
-      <div>
-        <input type="text" id="title" placeholder="Title" />
-        <textarea id="body" placeholder="Body"></textarea>
-        <input type="submit" value="submit" />
-      </div>
-    </form>
+    <div class="container">
+      <h4 class="display-4 mb-4">Fetch API Sandbox</h4>
+      <div class="d-flex"></div>
+      <button class="btn btn-primary mr-4" id="getText">Get Text</button>
+      <button  class="btn btn-success mr-4" id="getUsers">Get Users</button>
+      <button class="btn btn-warning mr-4" id="getPosts">Get API Data</button>
+    </div>
+      <hr />
+      <div id="output"></div>
+      <form id="addPost">
+        <div class="form-group">
+          <input class="form-control" type="text" id="title" placeholder="Title" />
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="body" placeholder="Body"></textarea>
+        </div>
+          <input class="btn btn-secodary" type="submit" value="submit" />
+        </div>
+      </form>
+    </div>
     <script src="app.js" type="text/javascript"></script>
   </body>
 </html>

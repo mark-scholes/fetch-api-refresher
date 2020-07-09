@@ -30,10 +30,10 @@ function getUsers() {
       data.forEach((element) => {
         const { id, name, email } = element;
         output += `
-              <ul>
-                  <li>ID: ${id}</li>
-                  <li>Name: ${name}</li>
-                  <li>Email: ${email}</li>
+              <ul class="list-group mb-3">
+                  <li class="list-group-item">ID: ${id}</li>
+                  <li class="list-group-item">Name: ${name}</li>
+                  <li class="list-group-item">Email: ${email}</li>
               </ul>`;
       });
       document.getElementById("output").innerHTML = output;
@@ -48,8 +48,8 @@ function getPosts() {
       data.forEach((post) => {
         const { userId, id, title, body } = post;
         output += `
-        <div>
-          <h3>${title}</h3>
+        <div class="card card-body mb-3">
+          <h2 class="mb-4>${title}</h2>
           <p>${body}</p>
         </div>
           `;
